@@ -725,7 +725,7 @@
           </div>
 
           <div class="col-lg-7">
-            <form action="portfolio.html" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="contactForm" class="php-email-form" data-aos="fade-up" data-aos-delay="200" novalidate>
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -750,7 +750,7 @@
 
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
-                  <div class="error-message"></div>
+                <!--<div class="error-message"></div>-->  
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
                   <button type="submit">Send Message</button>
@@ -799,9 +799,11 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/sendEmail.js"></script>
+  <script src="assets/js/sendEmailcoded.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 
 
