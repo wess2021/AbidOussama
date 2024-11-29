@@ -1,42 +1,50 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector(".php-email-form");
+const form = document.querySelector(".php-email-form");
 
-    // Initialize EmailJS with your public key
-    emailjs.init("FKT6JIMh5mgpKqEyH"); // Replace with your actual public key
+form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent form submission
 
-    form.addEventListener("submit", (event) => {
-        event.preventDefault(); // Prevent default form submission
+    const formData = {
+        service_id: "service_gijaliq",
+        template_id: "template_7tsjz8c",
+        user_id: "FKT6JIMh5mgpKqEyH", // Your public key
+        template_params: {
+            from_name: document.querySelector("#name-field").value,
+            from_email: document.querySelector("#email-field").value,
+            subject: document.querySelector("#subject-field").value,
+            message: document.querySelector("#message-field").value,
+        },
+    };
 
-        // Collect form data
-        const formData = new FormData(form);
-        const name = formData.get("name");
-        const email = formData.get("email");
-        const subject = formData.get("subject");
-        const message = formData.get("message");
+    // Show loading indicator
+    Swal.fire({
+        title: "Sending...",
+        text: "Please wait while your message is being sent.",
+        allowOutsideClick: false,
+        didOpen: () => Swal.showLoading(),
+    });
 
-        // Show loading indicator using SweetAlert2
-        Swal.fire({
-            title: "Sending...",
-            text: "Please wait while your message is being sent.",
-            allowOutsideClick: false,
-            didOpen: () => Swal.showLoading(),
-        });
-
-        // Use EmailJS to send the email
-        emailjs.send("service_gijaliq", "template_7tsjz8c", {
-            from_name: name,
-            from_email: email,
-            subject: subject,
-            message: message,
-        })
-        .then(() => {
-            // Success alert
-            Swal.fire({
-                icon: "success",
-                title: "Message Sent",
-                text: "Your message has been sent successfully!",
-            });
-            form.reset(); // Reset the form after success
+    // Make the AJAX call
+    fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+    })
+        .then((response) => {
+            if (response.ok) {
+                // Success alert
+                Swal.fire({
+                    icon: "success",
+                    title: "Message Sent",
+                    text: "Your message has been sent successfully!",
+                });
+                form.reset(); // Reset form
+            } else {
+                return response.json().then((error) => {
+                    throw new Error(error);
+                });
+            }
         })
         .catch((error) => {
             // Error alert
@@ -47,5 +55,4 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             console.error("Email sending error:", error);
         });
-    });
 });
