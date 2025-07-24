@@ -19,7 +19,7 @@
     headerToggleBtn.classList.toggle('bi-list');
     headerToggleBtn.classList.toggle('bi-x');
   }
-  headerToggleBtn.addEventListener('click', headerToggle);
+  //headerToggleBtn.addEventListener('click', headerToggle);
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -225,5 +225,116 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  // --- Modern Enhancements ---
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // 1. Light/Dark Mode Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggle.querySelector('i');
+    const darkClass = 'dark-background';
+    const lightClass = 'light-background';
+
+    // Helper: set theme
+    function setTheme(mode) {
+      if (mode === 'dark') {
+        body.classList.add(darkClass);
+        body.classList.remove(lightClass);
+        icon.classList.remove('bi-moon');
+        icon.classList.add('bi-sun');
+      } else {
+        body.classList.remove(darkClass);
+        body.classList.add(lightClass);
+        icon.classList.remove('bi-sun');
+        icon.classList.add('bi-moon');
+      }
+      localStorage.setItem('theme', mode);
+    }
+
+    // On load, set theme from localStorage or system
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      // Use system preference
+      setTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    }
+
+    themeToggle.addEventListener('click', function () {
+      const isDark = body.classList.contains(darkClass);
+      setTheme(isDark ? 'light' : 'dark');
+    });
+
+    // 2. Smooth Scroll for Nav Links
+    document.querySelectorAll('.navmenu a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({
+            top: target.offsetTop - 20,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // 3. Section Highlight in Navbar
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const navLinks = Array.from(document.querySelectorAll('.navmenu a[href^="#"]'));
+    function highlightNav() {
+      let scrollPos = window.scrollY + 120;
+      let current = sections[0].id;
+      for (const section of sections) {
+        if (section.offsetTop <= scrollPos) {
+          current = section.id;
+        }
+      }
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    }
+    window.addEventListener('scroll', highlightNav);
+    highlightNav();
+
+    // 4. Hero Gradient Overlay
+    const hero = document.querySelector('.hero');
+    if (hero && !document.getElementById('hero-gradient')) {
+      const gradient = document.createElement('div');
+      gradient.id = 'hero-gradient';
+      gradient.style.position = 'absolute';
+      gradient.style.inset = 0;
+      gradient.style.zIndex = 2;
+      gradient.style.pointerEvents = 'none';
+      gradient.style.background = 'linear-gradient(120deg, rgba(26,34,56,0.7) 0%, rgba(255,106,61,0.3) 100%)';
+      hero.appendChild(gradient);
+    }
+  });
+  // --- End Modern Enhancements ---
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Scrollspy logic for navbar
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    function activateNavLink() {
+      let scrollY = window.pageYOffset;
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').replace('#', '') === section.id) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+    window.addEventListener('scroll', activateNavLink);
+    activateNavLink();
+  });
 
 })();

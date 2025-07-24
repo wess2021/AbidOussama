@@ -64,17 +64,20 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 a {
   color: var(--accent-color);
   text-decoration: none;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
+  color: var(--secondary-color);
+  text-decoration: underline;
 }
 
 h1,
@@ -85,7 +88,14 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.2rem; }
 
 /* PHP Email Form Messages
 ------------------------------*/
@@ -517,11 +527,10 @@ section,
 }
 
 .section-title h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 
 .section-title h2:after {
@@ -536,7 +545,9 @@ section,
 }
 
 .section-title p {
-  margin-bottom: 0;
+  color: var(--default-color);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
 }
 
 /*--------------------------------------------------------------
@@ -1129,16 +1140,22 @@ section,
 }
 
 .contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
   background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
+  color: var(--contrast-color);
+  border: none;
+  border-radius: 30px;
+  padding: 0.7em 2em;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(26,34,56,0.08);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  box-shadow: 0 4px 16px rgba(26,34,56,0.12);
 }
 
 /*--------------------------------------------------------------
@@ -1273,3 +1290,213 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* --- Modern Professional Palette & Typography Overhaul --- */
+:root {
+  /* Typography */
+  --default-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  --heading-font: 'Inter', 'Raleway', sans-serif;
+  --nav-font: 'Inter', 'Poppins', sans-serif;
+
+  /* Modern Color Palette */
+  --primary-color: #1A2238; /* Deep Navy Blue */
+  --secondary-color: #9DAAF2; /* Soft Blue */
+  --accent-color: #FF6A3D; /* Vibrant Coral */
+  --background-color: #F4F4F6; /* Light Gray */
+  --surface-color: #FFFFFF; /* Card/Surface */
+  --heading-color: #22223B; /* Almost Black */
+  --default-color: #22223B; /* Body Text */
+  --contrast-color: #FFFFFF; /* For text on accent/navy */
+
+  /* Nav Colors */
+  --nav-color: #9DAAF2;
+  --nav-hover-color: #FF6A3D;
+  --nav-mobile-background-color: #1A2238;
+  --nav-dropdown-background-color: #1A2238;
+  --nav-dropdown-color: #9DAAF2;
+  --nav-dropdown-hover-color: #FF6A3D;
+
+  /* For smooth scroll */
+  scroll-behavior: smooth;
+}
+
+.light-background {
+  --background-color: #F4F4F6;
+  --surface-color: #FFFFFF;
+  --default-color: #22223B;
+  --heading-color: #22223B;
+}
+
+.dark-background {
+  --background-color: #1A2238;
+  --surface-color: #22223B;
+  --default-color: #FFFFFF;
+  --heading-color: #FFFFFF;
+}
+
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.2rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.2rem; }
+
+/* Navbar sticky and modern look */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: var(--primary-color);
+  color: var(--contrast-color);
+  z-index: 1000;
+  box-shadow: 2px 0 16px rgba(26,34,56,0.08);
+  border-right: 1px solid var(--secondary-color);
+}
+.header .logo h1 {
+  color: var(--accent-color);
+  font-family: var(--heading-font);
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+.header .profile-img img {
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 2px 12px rgba(26,34,56,0.10);
+}
+.header .social-links a {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  margin: 0 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.header .social-links a:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.navmenu a {
+  color: var(--nav-color);
+  font-family: var(--nav-font);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 1em 0.5em;
+  border-radius: 8px;
+  margin-bottom: 0.2em;
+  transition: background 0.2s, color 0.2s;
+}
+.navmenu a.active, .navmenu a:hover {
+  color: var(--nav-hover-color);
+  background: rgba(255,106,61,0.08);
+}
+
+/* Section spacing improvements */
+section, .section {
+  padding: 80px 0 60px 0;
+}
+
+/* Card/Surface improvements */
+.resume .resume-item, .portfolio .portfolio-content, .services .service-item, .contact .info-wrap, .contact .php-email-form {
+  background: var(--surface-color);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(26,34,56,0.06);
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+/* Progress bar improvements */
+.skills .progress-bar {
+  background: linear-gradient(90deg, var(--accent-color) 60%, var(--secondary-color) 100%);
+  border-radius: 5px;
+}
+
+/* Portfolio card hover effect */
+.portfolio .portfolio-content:hover {
+  box-shadow: 0 8px 32px rgba(26,34,56,0.18);
+  transform: translateY(-4px) scale(1.03);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* Responsive font size */
+@media (max-width: 991px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.2rem; }
+  body { font-size: 16px; }
+}
+
+@media (max-width: 575px) {
+  .header { width: 100vw; position: static; box-shadow: none; border-right: none; }
+  section, .section { padding: 40px 0 30px 0; }
+}
+
+@media (min-width: 992px) {
+  .services .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem 2.5rem;
+    justify-content: center;
+  }
+  .services .service-item {
+    flex: 1 1 calc(33.333% - 2rem);
+    max-width: calc(33.333% - 2rem);
+    margin-bottom: 0;
+  }
+}
+
+.services .service-item {
+  background: linear-gradient(135deg, var(--surface-color) 80%, var(--secondary-color) 100%);
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 2px 16px rgba(26,34,56,0.08);
+  border-radius: 18px;
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s, background 0.3s;
+  position: relative;
+  z-index: 1;
+}
+.services .service-item:hover {
+  box-shadow: 0 8px 32px rgba(255,106,61,0.18);
+  border-color: var(--accent-color);
+  background: linear-gradient(135deg, var(--secondary-color) 60%, var(--accent-color) 100%);
+  transform: translateY(-8px) scale(1.04);
+}
+.services .service-item .icon {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: 2px solid var(--secondary-color);
+  box-shadow: 0 2px 8px rgba(255,106,61,0.10);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+.services .service-item:hover .icon {
+  background: var(--secondary-color);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.services .service-item .title {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+.services .service-item .description {
+  color: var(--heading-color);
+  font-size: 1rem;
+  opacity: 0.92;
+}
+
+/* --- End Modern Overhaul --- */

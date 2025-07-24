@@ -1,0 +1,16 @@
+/* TODO START: ROOT */
+:root {
+  --black-color: #000;
+  --second-black: #000000cc;
+  --third-black: #232429;
+  --white-color: #ffffff;
+  --second-white: #ffffffe6;
+  --third-white: #ffffffb3;
+  --gray-color: #999999;
+  --secondry-color: #cdb30c;
+  --another-secondry: #9d8909;
+  --first--section-bg: #f4f5f9;
+  --second--section-bg: #232429;
+  --footer-color: #1e1f23;
+}
+/* TODO END: ROOT */

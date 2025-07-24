@@ -1,0 +1,618 @@
+/* --- Global Modernization & Consistency --- */
+:root {
+  --primary: #181818;
+  --secondary: #f4f4f4;
+  --accent: #cdb30c;
+  --surface: #fff;
+  --text: #181818;
+  --text-invert: #fff;
+  --shadow: 0 4px 32px rgba(0,0,0,0.08);
+  --radius: 18px;
+  --transition: 0.3s cubic-bezier(.77,0,.18,1);
+}
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background: var(--primary);
+  color: var(--text-invert);
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+  margin-bottom: 0.7em;
+}
+p, ul, li, label, input, textarea {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  color: var(--text);
+  font-size: 1.08em;
+  margin-bottom: 0.7em;
+}
+.section, section {
+  padding: 80px 0 60px 0;
+  background: var(--surface);
+  color: var(--text);
+}
+.section-title h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 0.5em;
+}
+.section-title p {
+  color: #444;
+  font-size: 1.15em;
+  margin-bottom: 2em;
+}
+/* Card/Surface Consistency */
+.resume .resume-item, .portfolio .portfolio-content, .services .service-item, .contact .info-wrap, .contact .php-email-form {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2em;
+  margin-bottom: 2em;
+  border: 2px solid transparent;
+  transition: box-shadow var(--transition), border-color var(--transition), transform var(--transition);
+}
+.resume .resume-item:hover, .portfolio .portfolio-content:hover, .services .service-item:hover, .contact .info-wrap:hover, .contact .php-email-form:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(205,179,12,0.18);
+  transform: translateY(-6px) scale(1.03);
+}
+/* Portfolio Card Hover */
+.portfolio .portfolio-content {
+  transition: box-shadow var(--transition), transform var(--transition);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+}
+.portfolio .portfolio-content:hover {
+  box-shadow: 0 8px 32px rgba(205,179,12,0.18);
+  transform: translateY(-4px) scale(1.03);
+}
+.portfolio .portfolio-info {
+  background: rgba(24,24,24,0.85);
+  color: #fff;
+  padding: 1em 1.2em;
+  border-radius: 0 0 var(--radius) var(--radius);
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.portfolio .portfolio-content:hover .portfolio-info {
+  opacity: 1;
+}
+/* Button Styles */
+.btn, button, .btn-primary {
+  background: var(--accent);
+  color: var(--primary);
+  border: none;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.7em 2em;
+  transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+  box-shadow: 0 2px 8px rgba(205,179,12,0.08);
+}
+.btn:hover, .btn:focus, .btn-primary:hover {
+  background: var(--primary);
+  color: var(--accent);
+  box-shadow: 0 4px 24px rgba(205,179,12,0.15);
+}
+input, textarea {
+  border-radius: 8px;
+  border: 1.5px solid #eaeaea;
+  padding: 0.7em 1em;
+  background: #fafafa;
+  color: #181818;
+  transition: border-color 0.2s;
+}
+input:focus, textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+label {
+  font-weight: 600;
+  color: #181818;
+}
+/* Social Links Modern */
+.social-links a {
+  color: #181818;
+  background: rgba(205,179,12,0.08);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+  font-size: 1.2em;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.social-links a:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.12) rotate(-8deg);
+}
+/* Responsive Layouts */
+@media (max-width: 991px) {
+  .section, section { padding: 40px 0 30px 0; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.6rem; }
+  h3 { font-size: 1.2rem; }
+  body { font-size: 16px; }
+}
+@media (max-width: 575px) {
+  .section, section { padding: 24px 0 18px 0; }
+  .resume .resume-item, .portfolio .portfolio-content, .services .service-item, .contact .info-wrap, .contact .php-email-form { padding: 1em; }
+}
+/* Smooth Scroll */
+html { scroll-behavior: smooth; } 
+
+#resume .resume-item {
+  position: relative;
+  border-left: 6px solid var(--accent) !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  background: #fff !important;
+  color: #181818 !important;
+  border-radius: 18px;
+  margin-bottom: 2em;
+  padding: 2em 2em 2em 2.8em;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2em;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+#resume .resume-item .resume-icon {
+  flex-shrink: 0;
+  font-size: 2.1em;
+  color: var(--accent);
+  margin-right: 0.7em;
+  margin-top: 0.1em;
+}
+#resume .resume-item h4, #resume .resume-item h5, #resume .resume-item p, #resume .resume-item ul, #resume .resume-item li {
+  color: #181818 !important;
+}
+#resume .resume-item ul li strong {
+  color: var(--accent);
+}
+#resume .resume-item:hover {
+  border-color: #fff700 !important;
+  box-shadow: 0 8px 32px rgba(205,179,12,0.18);
+}
+@media (max-width: 767px) {
+  #resume .resume-item {
+    flex-direction: column;
+    padding: 1.2em 1em 1.2em 1.8em;
+    gap: 0.7em;
+  }
+  #resume .resume-item .resume-icon {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+} 
+
+/* --- Services Section Premium Card Styles --- */
+.services-section .service-card {
+  position: relative;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(24,24,24,0.10), 0 1.5px 8px rgba(205,179,12,0.06);
+  padding: 3rem 2rem 2.5rem 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: box-shadow 0.35s cubic-bezier(.77,0,.18,1), transform 0.35s cubic-bezier(.77,0,.18,1), border-color 0.35s;
+  border: 2.5px solid transparent;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.services-section .service-card:hover {
+  box-shadow: 0 16px 48px rgba(205,179,12,0.18), 0 2px 16px rgba(24,24,24,0.10);
+  border-color: #cdb30c;
+  transform: translateY(-8px) scale(1.03);
+}
+.services-section .service-number {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #cdb30c;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+.services-section .service-icon {
+  font-size: 3.2rem;
+  color: #cdb30c;
+  margin-bottom: 1.2rem;
+  z-index: 1;
+}
+.services-section .service-card h4 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #181818;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+.services-section .service-card p {
+  color: #444;
+  font-size: 1.08rem;
+  z-index: 1;
+}
+@media (max-width: 991px) {
+  .services-section .service-card {
+    min-height: 280px;
+    padding: 2rem 1.2rem 1.5rem 1.2rem;
+  }
+  .services-section .service-number {
+    font-size: 3.2rem;
+    top: 18px;
+    left: 20px;
+  }
+  .services-section .service-icon {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 575px) {
+  .services-section .service-card {
+    min-height: 220px;
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+  .services-section .service-number {
+    font-size: 2.1rem;
+    top: 10px;
+    left: 12px;
+  }
+  .services-section .service-icon {
+    font-size: 1.5rem;
+  }
+} 
+
+/* --- Resume Section Premium Card Styles --- */
+.resume-section .resume-card {
+  position: relative;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(24,24,24,0.10), 0 1.5px 8px rgba(205,179,12,0.06);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: box-shadow 0.35s cubic-bezier(.77,0,.18,1), transform 0.35s cubic-bezier(.77,0,.18,1), border-color 0.35s;
+  border-left: 6px solid #cdb30c;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.resume-section .resume-card:hover {
+  box-shadow: 0 16px 48px rgba(205,179,12,0.18), 0 2px 16px rgba(24,24,24,0.10);
+  border-left: 6px solid #fff700;
+  transform: translateY(-8px) scale(1.03);
+}
+.resume-section .resume-icon {
+  font-size: 2.2rem;
+  color: #cdb30c;
+  margin-bottom: 1.2rem;
+  z-index: 1;
+}
+.resume-section .resume-card h4 {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #181818;
+  margin-bottom: 0.5rem;
+  z-index: 1;
+}
+.resume-section .resume-card .text-muted {
+  color: #888 !important;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+}
+.resume-section .resume-card ul, .resume-section .resume-card p {
+  color: #444;
+  font-size: 1.05rem;
+  z-index: 1;
+}
+.resume-section .resume-card ul {
+  padding-left: 1.2em;
+}
+@media (max-width: 991px) {
+  .resume-section .resume-card {
+    min-height: 220px;
+    padding: 1.5rem 1rem 1.2rem 1rem;
+  }
+  .resume-section .resume-icon {
+    font-size: 1.5rem;
+  }
+} 
+
+/* --- Modern Glass Navbar & Animated Nav Links --- */
+.nav-glass {
+  background: rgba(255,255,255,0.85) !important;
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  box-shadow: 0 4px 24px rgba(24,24,24,0.08);
+  border-bottom: 1.5px solid #ececec;
+}
+.navbar-nav .nav-link {
+  position: relative;
+  font-weight: 600;
+  color: #181818 !important;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  border-radius: 8px;
+  margin: 0 0.5em;
+  padding: 0.5em 1em;
+  transition: color 0.25s, background 0.25s;
+  background: none;
+  z-index: 1;
+}
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 8px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent) 60%, #fff700 100%);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.35s cubic-bezier(.77,0,.18,1);
+  z-index: 1;
+}
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(1);
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+  color: var(--accent) !important;
+  background: rgba(205,179,12,0.10);
+}
+.nav-cta-btn {
+  background: var(--accent) !important;
+  color: #181818 !important;
+  font-weight: 700;
+  border-radius: 2em;
+  padding: 0.5em 1.5em;
+  box-shadow: 0 2px 8px rgba(205,179,12,0.08);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  margin-left: 0.5em;
+}
+.nav-cta-btn:hover, .nav-cta-btn:focus {
+  background: #181818 !important;
+  color: var(--accent) !important;
+  box-shadow: 0 4px 24px rgba(205,179,12,0.15);
+}
+@media (max-width: 991px) {
+  .nav-glass {
+    padding: 0.7em 0.5em;
+  }
+  .navbar-nav .nav-link {
+    margin: 0.2em 0;
+    padding: 0.7em 1.2em;
+    font-size: 1.08rem;
+  }
+  .nav-cta-btn {
+    display: block;
+    width: 100%;
+    margin: 1em 0 0 0;
+    text-align: center;
+  }
+} 
+
+/* --- Contact Section Premium Card Styles --- */
+.contact-section .contact-card {
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(24,24,24,0.10), 0 1.5px 8px rgba(205,179,12,0.06);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: box-shadow 0.35s cubic-bezier(.77,0,.18,1), transform 0.35s cubic-bezier(.77,0,.18,1);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-section .contact-card:hover {
+  box-shadow: 0 16px 48px rgba(205,179,12,0.18), 0 2px 16px rgba(24,24,24,0.10);
+  transform: translateY(-8px) scale(1.03);
+}
+.contact-section .contact-icon {
+  font-size: 2.8rem;
+  color: #cdb30c;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-section .contact-card h4 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #181818;
+  margin-bottom: 0.5rem;
+}
+.contact-section .contact-card p {
+  color: #444;
+  font-size: 1.05rem;
+}
+@media (max-width: 991px) {
+  .contact-section .contact-card {
+    min-height: 160px;
+    padding: 1.5rem 1rem 1.2rem 1rem;
+  }
+  .contact-section .contact-icon {
+    font-size: 2rem;
+  }
+} 
+
+/* --- Portfolio Card Height & Image Fit (Final) --- */
+.portfolio-content {
+  height: 180px;
+  min-height: 120px;
+  max-height: 220px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .portfolio-content {
+    height: 120px;
+    min-height: 80px;
+    max-height: 140px;
+  }
+}
+.portfolio-img-fit {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.2rem 1.2rem 0 0;
+  transition: transform 0.3s cubic-bezier(.77,0,.18,1);
+  padding: 0;
+}
+
+/* --- Portfolio Card Padding Consistency --- */
+.portfolio-content {
+  padding-bottom: 1.2rem;
+} 
+
+/* --- Contact Form Card Styles --- */
+.contact-form-card {
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(24,24,24,0.10), 0 1.5px 8px rgba(205,179,12,0.06);
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: box-shadow 0.35s cubic-bezier(.77,0,.18,1), transform 0.35s cubic-bezier(.77,0,.18,1);
+}
+@media (max-width: 991px) {
+  .contact-form-card {
+    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+  }
+}
+@media (max-width: 575px) {
+  .contact-form-card {
+    padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+  }
+}
+
+/* --- Responsive Polish for All Sections --- */
+@media (max-width: 1199px) {
+  .hero-overlay h1 { font-size: 2.2rem; }
+  .hero-overlay h2 { font-size: 1.2rem; }
+}
+@media (max-width: 991px) {
+  .hero-section { min-height: 60vh !important; }
+  .hero-overlay h1 { font-size: 1.6rem; }
+  .hero-overlay h2 { font-size: 1rem; }
+  .portfolio-content { height: 120px; }
+  .resume-section .resume-card, .services-section .service-card, .contact-section .contact-card { padding: 1.2rem 0.7rem 1.2rem 0.7rem; min-height: 120px; }
+}
+@media (max-width: 767px) {
+  .hero-section { min-height: 40vh !important; }
+  .hero-overlay h1 { font-size: 1.1rem; }
+  .hero-overlay h2 { font-size: 0.9rem; }
+  .portfolio-content { height: 90px; }
+  .resume-section .resume-card, .services-section .service-card, .contact-section .contact-card { padding: 0.7rem 0.3rem 0.7rem 0.3rem; min-height: 80px; }
+  .navbar-brand img { width: 28px !important; height: 28px !important; }
+}
+@media (max-width: 575px) {
+  .hero-section { min-height: 30vh !important; }
+  .hero-overlay h1, .hero-overlay h2 { font-size: 0.9rem; }
+  .portfolio-content { height: 60px; }
+  .resume-section .resume-card, .services-section .service-card, .contact-section .contact-card { padding: 0.4rem 0.1rem 0.4rem 0.1rem; min-height: 60px; }
+} 
+
+/* --- Scroll-to-Top Button Modern Style --- */
+#scroll-top {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  width: 56px;
+  height: 56px;
+  background: #f7e7b4;
+  color: #181818;
+  border-radius: 50%;
+  box-shadow: 0 4px 24px rgba(24,24,24,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, background 0.2s, color 0.2s;
+  border: none;
+  font-size: 2rem;
+}
+#scroll-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+#scroll-top:hover, #scroll-top:focus {
+  background: #cdb30c;
+  color: #fff;
+}
+#scroll-top i {
+  font-size: 2rem;
+  color: inherit;
+}
+@media (max-width: 767px) {
+  #scroll-top {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
+} 
+
+/* --- About Section Rectangle Image --- */
+.about-img-rect {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  max-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-img-rect img {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(24,24,24,0.10);
+}
+@media (max-width: 991px) {
+  .about-img-rect {
+    min-height: 220px;
+    max-height: 320px;
+  }
+  .about-img-rect img {
+    max-height: 320px;
+  }
+}
+@media (max-width: 767px) {
+  .about-img-rect {
+    min-height: 140px;
+    max-height: 200px;
+  }
+  .about-img-rect img {
+    max-height: 200px;
+  }
+} 

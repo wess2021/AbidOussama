@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abid Oussama - Portfolio</title>
+    <link rel="icon" href="assets/img/code1.jpg" />
+    <!-- START MAIN CSS FILE -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- START FONTAESOME LIBRARY CSS FILE -->
+    <link rel="stylesheet" href="assets/css/vendors/all.min.css" />
+    <!-- START RESPONSIVE CSS FILE -->
+    <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
+  </head>
+  <body>
+    <!-- START HEADER -->
+    <header>
+      <div class="contact__header">
+        <div class="container">
+          <ul class="direct">
+            <li>
+              <span class="contact-label">Phone no:</span>
+              <a href="tel:+21658273086">+216 58 273 086</a>
+            </li>
+            <li>
+              <span class="contact-label">or email us:</span>
+              <a href="mailto:abidoussama2015@gmail.com">abidoussama2015@gmail.com</a>
+            </li>
+          </ul>
+          <div class="social" aria-label="Social Links">
+            <a href="#" aria-label="Facebook"><span><i class="fa-brands fa-facebook-f"></i></span></a>
+            <a href="#" aria-label="Twitter"><span><i class="fa-brands fa-twitter"></i></span></a>
+            <a href="#" aria-label="Instagram"><span><i class="fa-brands fa-instagram"></i></span></a>
+            <a href="#" aria-label="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span></a>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar-sticky">
+        <div class="container">
+          <a class="logo" href="#home">Abid Oussama</a>
+          <ul class="navbar-links">
+            <li><a href="#home" class="active">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header__intro hero-modern" id="home">
+        <div class="container hero-content">
+          <span class="hero-welcome">Welcome to my portfolio</span>
+          <h1 class="hero-title">Abid Oussama</h1>
+          <p class="hero-desc">
+            I'm a Software Engineer & Web Developer passionate about building efficient, scalable, and user-friendly applications.
+          </p>
+          <div class="hero-btn-row">
+            <a href="#contact" class="cta-btn">Let’s Connect</a>
+            <a href="#portfolio" class="cta-btn secondary">View Portfolio</a>
+          </div>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li><span class="active"></span></li>
+        <li><span></span></li>
+      </ul>
+      <style>
+        .hero-modern {
+          min-height: 60vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          text-align: center;
+          margin-bottom: 2rem;
+          border-radius: 0 0 2.5rem 2.5rem;
+          box-shadow: 0 4px 24px rgba(234,179,8,0.07);
+        }
+        .hero-content {
+          width: 100%;
+          max-width: 700px;
+          margin: 0 auto;
+          padding: 3rem 1.5rem 2.5rem 1.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transform: translateY(40px);
+          animation: heroFadeIn 1.1s cubic-bezier(.77,0,.18,1) 0.2s forwards;
+        }
+        @keyframes heroFadeIn {
+          to {
+            opacity: 1;
+            transform: none;
+          }
+        }
+        .hero-welcome {
+          font-size: 1.2rem;
+          color: #eab308;
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          margin-bottom: 0.7rem;
+          text-transform: uppercase;
+        }
+        .hero-title {
+          font-size: 2.8rem;
+          font-weight: 800;
+          color: #111;
+          margin-bottom: 0.7rem;
+          letter-spacing: -0.02em;
+        }
+        .hero-desc {
+          font-size: 1.25rem;
+          color: #444;
+          margin-bottom: 1.5rem;
+          font-weight: 400;
+          line-height: 1.6;
+        }
+        .hero-btn-row {
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-bottom: 0.5rem;
+        }
+        .cta-btn {
+          display: inline-block;
+          margin: 0;
+          padding: 0.7em 2em;
+          border-radius: 2em;
+          background: #eab308;
+          color: #fffbe6;
+          font-weight: 600;
+          text-decoration: none;
+          transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+          box-shadow: 0 2px 8px rgba(234,179,8,0.07);
+          white-space: nowrap;
+        }
+        .cta-btn.secondary {
+          background: #fffbe6;
+          color: #eab308;
+          border: 2px solid #eab308;
+        }
+        .cta-btn:hover {
+          background: #fffbe6;
+          color: #eab308;
+          border: 2px solid #eab308;
+        }
+        .cta-btn.secondary:hover {
+          background: #eab308;
+          color: #fffbe6;
+        }
+        @media (max-width: 700px) {
+          .hero-modern {
+            min-height: 45vh;
+            border-radius: 0 0 1.2rem 1.2rem;
+            padding: 1.5rem 0;
+          }
+          .hero-title {
+            font-size: 2rem;
+          }
+          .hero-content {
+            padding: 2rem 0.5rem 1.5rem 0.5rem;
+          }
+          .hero-btn-row {
+            flex-direction: column;
+            gap: 0.7rem;
+          }
+        }
+      </style>
+    </header>
+    <style>
+      .navbar-sticky {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: #111;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        transition: box-shadow 0.2s;
+      }
+      .navbar-links li a {
+        padding: 0.7em 1.2em;
+        border-radius: 2em;
+        transition: background 0.18s, color 0.18s;
+        font-weight: 500;
+        color: #fffbe6;
+      }
+      .navbar-links li a:hover,
+      .navbar-links li a.active {
+        background: #eab308;
+        color: #111;
+      }
+      .social a {
+        color: inherit;
+        margin: 0 0.2em;
+        font-size: 1.1em;
+        transition: color 0.18s;
+        outline: none;
+      }
+      .social a:focus,
+      .social a:hover {
+        color: #eab308;
+      }
+      .contact-label {
+        font-weight: 500;
+        margin-right: 0.2em;
+      }
+      .cta-btn {
+        display: inline-block;
+        margin: 0.5em 0.5em 0 0;
+        padding: 0.7em 2em;
+        border-radius: 2em;
+        background: #eab308;
+        color: #fffbe6;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+        box-shadow: 0 2px 8px rgba(234,179,8,0.07);
+      }
+      .cta-btn.secondary {
+        background: #fffbe6;
+        color: #eab308;
+        border: 2px solid #eab308;
+      }
+      .cta-btn:hover {
+        background: #fffbe6;
+        color: #eab308;
+        border: 2px solid #eab308;
+      }
+      .cta-btn.secondary:hover {
+        background: #eab308;
+        color: #fffbe6;
+      }
+    </style>
+    <!-- START SECTION ABOUT -->
+    <section class="about about-modern" id="about">
+      <div class="container about-container">
+        <div class="about-img-col">
+          <div class="about-img-wrapper">
+            <img src="assets/img/profile1.jpg" alt="Abid Oussama" class="about-img-circle" />
+          </div>
+        </div>
+        <div class="about-intro-col">
+          <div class="headers--holder">
+            <span class="intro--span">ABOUT ME</span>
+            <h2 class="intro--header">Software Engineer & Web Developer</h2>
+          </div>
+          <p class="about-desc">
+            I am a dedicated software engineer with expertise in web development and problem-solving. My passion lies in creating efficient and scalable applications, combining functionality with an intuitive user experience.
+          </p>
+          <div class="about-highlights-row">
+            <div class="about-highlight-card">
+              <span class="about-highlight-icon"><i class="fa-regular fa-lightbulb"></i></span>
+              <div>
+                <span class="about-highlight-value">35</span>
+                <span class="about-highlight-label">YEARS OLD</span>
+              </div>
+            </div>
+            <!-- Add more highlight cards here if desired -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .about-modern {
+        padding: 5rem 0 4rem 0;
+        background: #fff;
+        border-radius: 2.5rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 4px 24px rgba(24,24,24,0.06);
+        animation: fadeInUp 1.1s cubic-bezier(.77,0,.18,1);
+      }
+      .about-container {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .about-img-col {
+        flex: 0 0 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .about-img-wrapper {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 2px 16px rgba(234,179,8,0.13);
+        border: 5px solid #eab308;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .about-img-circle {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+      }
+      .about-intro-col {
+        flex: 1 1 320px;
+        min-width: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .about-desc {
+        font-size: 1.22rem;
+        color: #444;
+        margin-bottom: 2rem;
+        line-height: 1.8;
+        font-family: 'Inter', Arial, sans-serif;
+      }
+      .headers--holder .intro--span {
+        color: #eab308;
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+      .headers--holder .intro--header {
+        color: #181818;
+        font-size: 2.4rem;
+        font-weight: 900;
+        margin-bottom: 1.1rem;
+        letter-spacing: 0.01em;
+        font-family: 'Inter', Arial, sans-serif;
+      }
+      .about-highlights-row {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        margin-top: 0.5rem;
+      }
+      .about-highlight-card {
+        display: flex;
+        align-items: center;
+        background: #f7f7fa;
+        border-radius: 1.2rem;
+        box-shadow: 0 2px 8px rgba(24,24,24,0.07);
+        padding: 0.9rem 1.7rem;
+        gap: 0.8rem;
+        min-width: 110px;
+        font-family: 'Inter', Arial, sans-serif;
+        animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+      }
+      .about-highlight-icon {
+        color: #eab308;
+        font-size: 1.8rem;
+        margin-right: 0.5rem;
+      }
+      .about-highlight-value {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: #181818;
+        display: block;
+        line-height: 1.1;
+      }
+      .about-highlight-label {
+        font-size: 1rem;
+        color: #eab308;
+        font-weight: 700;
+        display: block;
+        letter-spacing: 0.04em;
+      }
+      @media (max-width: 900px) {
+        .about-container {
+          flex-direction: column;
+          gap: 2.5rem;
+        }
+        .about-img-col {
+          margin-bottom: 0.5rem;
+        }
+      }
+    </style>
+    <!-- Stats Section Modernized -->
+<section id="stats" class="stats-section-pro">
+  <div class="stats-pro-container">
+    <div class="stats-pro-grid">
+      <div class="stats-pro-card">
+        <div class="stats-pro-icon"><i class="bi bi-emoji-smile"></i></div>
+        <div class="stats-pro-number" data-count="60">0</div>
+        <div class="stats-pro-label">Happy Clients</div>
+      </div>
+      <div class="stats-pro-card">
+        <div class="stats-pro-icon"><i class="bi bi-journal-richtext"></i></div>
+        <div class="stats-pro-number" data-count="15">0</div>
+        <div class="stats-pro-label">Completed Projects</div>
+      </div>
+      <div class="stats-pro-card">
+        <div class="stats-pro-icon"><i class="bi bi-headset"></i></div>
+        <div class="stats-pro-number" data-count="2100">0</div>
+        <div class="stats-pro-label">Hours of Support</div>
+      </div>
+      <div class="stats-pro-card">
+        <div class="stats-pro-icon"><i class="bi bi-people"></i></div>
+        <div class="stats-pro-number" data-count="10">0</div>
+        <div class="stats-pro-label">Team Members</div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Skills Section Modernized -->
+<section id="skills" class="skills-section-pro">
+  <div class="skills-pro-container">
+    <div class="skills-pro-title">
+      <h2>Skills</h2>
+      <p>Proficient in full-stack development, leveraging a variety of technologies to build robust applications across various domains such as e-commerce, mobile applications, and web platforms.</p>
+    </div>
+    <div class="skills-pro-content">
+      <div class="skills-pro-categories">
+        <div class="skills-pro-category">
+          <div class="skills-pro-cat-icon"><i class="fa-solid fa-code"></i></div>
+          <div class="skills-pro-cat-label">Programming Languages</div>
+        </div>
+        <div class="skills-pro-category">
+          <div class="skills-pro-cat-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <div class="skills-pro-cat-label">Frameworks</div>
+        </div>
+        <div class="skills-pro-category">
+          <div class="skills-pro-cat-icon"><i class="fa-solid fa-database"></i></div>
+          <div class="skills-pro-cat-label">Databases</div>
+        </div>
+      </div>
+      <div class="skills-pro-bars">
+        <div class="skills-pro-bar">
+          <span>HTML/CSS</span>
+          <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="90"></div></div>
+          <span class="skills-pro-bar-val">90%</span>
+        </div>
+        <div class="skills-pro-bar">
+          <span>JavaScript</span>
+          <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="75"></div></div>
+          <span class="skills-pro-bar-val">75%</span>
+        </div>
+        <div class="skills-pro-bar">
+          <span>PHP</span>
+          <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="80"></div></div>
+          <span class="skills-pro-bar-val">80%</span>
+        </div>
+        <div class="skills-pro-bar">
+          <span>Java</span>
+          <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="95"></div></div>
+          <span class="skills-pro-bar-val">95%</span>
+        </div>
+        <div class="skills-pro-bar">
+          <span>C#</span>
+          <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="70"></div></div>
+          <span class="skills-pro-bar-val">70%</span>
+        </div>
+        <div class="skills-pro-bar">
+          <span>Laravel</span>
+          <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="80"></div></div>
+          <span class="skills-pro-bar-val">80%</span>
+        </div>
+        <div class="skills-pro-bar">
+          <span>Symfony</span>
+          <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="85"></div></div>
+          <span class="skills-pro-bar-val">85%</span>
+        </div>
+        <div class="skills-pro-bar">
+          <span>Vue.js</span>
+          <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="75"></div></div>
+          <span class="skills-pro-bar-val">75%</span>
+        </div>
+        <div class="skills-pro-bar">
+          <span>.NET MVC</span>
+          <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="80"></div></div>
+          <span class="skills-pro-bar-val">80%</span>
+        </div>
+        <div class="skills-pro-bar">
+          <span>MySQL</span>
+          <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="90"></div></div>
+          <span class="skills-pro-bar-val">90%</span>
+        </div>
+        <div class="skills-pro-bar">
+          <span>MongoDB</span>
+          <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="70"></div></div>
+          <span class="skills-pro-bar-val">70%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+// Stats count-up animation
+function animateStats() {
+  document.querySelectorAll('.stats-pro-number').forEach(function(el) {
+    const end = +el.getAttribute('data-count');
+    let start = 0;
+    const duration = 1200;
+    const step = Math.ceil(end / (duration / 16));
+    function update() {
+      start += step;
+      if (start > end) start = end;
+      el.textContent = start;
+      if (start < end) requestAnimationFrame(update);
+    }
+    update();
+  });
+}
+window.addEventListener('DOMContentLoaded', animateStats);
+// Skills bar animation
+function animateSkillsBars() {
+  document.querySelectorAll('.skills-pro-bar-inner').forEach(function(bar) {
+    const width = bar.getAttribute('data-width');
+    bar.style.width = '0%';
+    setTimeout(() => { bar.style.width = width + '%'; }, 300);
+  });
+}
+window.addEventListener('DOMContentLoaded', animateSkillsBars);
+</script>
+<style>
+.stats-section-pro {
+  background: #fff;
+  padding: 4rem 0 3rem 0;
+  border-radius: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 24px rgba(24,24,24,0.06);
+  font-family: 'Inter', Arial, sans-serif;
+  animation: fadeInUp 1.1s cubic-bezier(.77,0,.18,1);
+}
+.stats-pro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+.stats-pro-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.2rem;
+  justify-content: center;
+}
+.stats-pro-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 1.7rem;
+  box-shadow: 0 8px 32px rgba(24,24,24,0.10), 0 2px 16px rgba(234,179,8,0.10);
+  border-left: 5px solid #eab308;
+  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+  min-width: 0;
+  min-height: 180px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: box-shadow 0.25s, transform 0.25s, border 0.25s, background 0.25s;
+  will-change: transform, box-shadow;
+  animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+}
+.stats-pro-card:hover {
+  box-shadow: 0 16px 48px rgba(234,179,8,0.18), 0 4px 24px rgba(24,24,24,0.10);
+  transform: translateY(-10px) scale(1.04);
+  border-left: 5px solid #fff700;
+  background: rgba(255,255,255,1);
+}
+.stats-pro-icon {
+  font-size: 2.3rem;
+  color: #eab308;
+  margin-bottom: 1.2rem;
+  z-index: 1;
+}
+.stats-pro-number {
+  font-size: 2.1rem;
+  font-weight: 900;
+  color: #181818;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.stats-pro-label {
+  color: #444;
+  font-size: 1.13rem;
+  font-weight: 600;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .stats-pro-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .stats-pro-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .stats-section-pro {
+    padding: 2rem 0 1.5rem 0;
+  }
+}
+.skills-section-pro {
+  background: #fff;
+  padding: 4rem 0 3rem 0;
+  border-radius: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 24px rgba(24,24,24,0.06);
+  font-family: 'Inter', Arial, sans-serif;
+  animation: fadeInUp 1.1s cubic-bezier(.77,0,.18,1);
+}
+.skills-pro-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+.skills-pro-title h2 {
+  color: #181818;
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+.skills-pro-title p {
+  color: #444;
+  font-size: 1.18rem;
+  max-width: 700px;
+  margin: 0 auto 2.2rem auto;
+  line-height: 1.7;
+  text-align: center;
+}
+.skills-pro-content {
+  display: flex;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.skills-pro-categories {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  align-items: flex-end;
+  margin-top: 1.5rem;
+}
+.skills-pro-category {
+  display: flex;
+  align-items: center;
+  gap: 1.1em;
+  background: rgba(255,255,255,0.95);
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 8px rgba(24,24,24,0.07);
+  padding: 0.9rem 1.7rem;
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #181818;
+  min-width: 180px;
+  animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+}
+.skills-pro-cat-icon {
+  color: #eab308;
+  font-size: 1.7rem;
+}
+.skills-pro-cat-label {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #181818;
+}
+.skills-pro-bars {
+  flex: 1 1 320px;
+  min-width: 260px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.skills-pro-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-bottom: 0.5em;
+  font-size: 1.13rem;
+  font-weight: 600;
+  color: #181818;
+}
+.skills-pro-bar span {
+  min-width: 80px;
+}
+.skills-pro-bar-outer {
+  flex: 1 1 auto;
+  background: #fffbe6;
+  border-radius: 1em;
+  height: 1.1em;
+  margin: 0 0.5em;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(234,179,8,0.07);
+}
+.skills-pro-bar-inner {
+  height: 100%;
+  background: linear-gradient(90deg, #eab308 60%, #fffbe6 100%);
+  border-radius: 1em;
+  transition: width 1.2s cubic-bezier(.77,0,.18,1);
+  width: 0%;
+}
+.skills-pro-bar-val {
+  color: #eab308;
+  font-weight: 700;
+  font-size: 1.05em;
+  min-width: 40px;
+  text-align: right;
+}
+@media (max-width: 900px) {
+  .skills-pro-content {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: stretch;
+  }
+  .skills-pro-categories {
+    flex-direction: row;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .skills-section-pro {
+    padding: 2rem 0 1.5rem 0;
+  }
+  .skills-pro-title h2 {
+    font-size: 1.5rem;
+  }
+}
+</style>
+    <!-- START SECTION SERVICES -->
+    <section class="services services-modern" id="services">
+      <div class="container">
+        <div class="services-header">
+          <h2>WHAT I DO</h2>
+          <p>
+            As a versatile software engineer and web developer, I offer a range of services designed to help businesses and individuals harness the power of technology and create exceptional digital experiences.
+          </p>
+        </div>
+        <div class="services-cards-row">
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-code"></i></span>
+            <h3>WEB DEVELOPMENT</h3>
+            <p class="service-desc">I build responsive, user-friendly websites and web applications using modern technologies like HTML5, CSS3, JavaScript, and frameworks like Spring Boot, Vue.js, and Angular.</p>
+            <span class="angel active"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-paint-brush"></i></span>
+            <h3>UI/UX DESIGN</h3>
+            <p class="service-desc">I focus on creating intuitive user interfaces and seamless user experiences, ensuring that users can easily interact with digital products.</p>
+            <span class="angel"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-cogs"></i></span>
+            <h3>SOFTWARE ENGINEERING</h3>
+            <p class="service-desc">I offer full-stack software development services, creating scalable and maintainable solutions for businesses, with experience in back-end technologies and database management.</p>
+            <span class="angel"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-network-wired"></i></span>
+            <h3>API DEVELOPMENT</h3>
+            <p class="service-desc">Designing and implementing robust APIs for seamless integration between various systems, enabling communication and data exchange in a secure manner.</p>
+            <span class="angel"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-shopping-cart"></i></span>
+            <h3>E-COMMERCE SOLUTIONS</h3>
+            <p class="service-desc">Helping businesses establish their online presence through e-commerce development, including PrestaShop and custom online stores, with a focus on functionality and security.</p>
+            <span class="angel"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-chalkboard-teacher"></i></span>
+            <h3>CONSULTING & TRAINING</h3>
+            <p class="service-desc">Providing personalized consulting and training services to help teams improve their development processes, adopt best practices, and stay updated with the latest technologies.</p>
+            <span class="angel"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .services-modern {
+        padding: 5rem 0 4rem 0;
+        background: #f7f7fa;
+        border-radius: 2.5rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 4px 24px rgba(24,24,24,0.06);
+        animation: fadeInUp 1.1s cubic-bezier(.77,0,.18,1);
+      }
+      .services-header {
+        width: 100%;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .services-header h2,
+      .services-header p {
+        width: 100%;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+      .services-header h2 {
+        color: #181818;
+        font-size: 2.3rem;
+        font-weight: 900;
+        margin-bottom: 0.7rem;
+        letter-spacing: 0.01em;
+        font-family: 'Inter', Arial, sans-serif;
+      }
+      .services-header p {
+        color: #444;
+        font-size: 1.18rem;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.7;
+        font-family: 'Inter', Arial, sans-serif;
+      }
+      .services-cards-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.8rem 2.2rem;
+        justify-content: center;
+        margin-top: 0;
+      }
+      .service-card-modern {
+        background: #fff;
+        border-radius: 1.7rem;
+        box-shadow: 0 2px 16px rgba(24,24,24,0.10);
+        border: 1.5px solid #f7f7fa;
+        padding: 3rem 2.2rem 2.5rem 2.2rem;
+        min-width: 0;
+        min-height: 370px;
+        max-width: 440px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        transition: box-shadow 0.18s, transform 0.18s, border 0.18s;
+        font-size: 1.13rem;
+        animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+      }
+      .service-card-modern:hover {
+        box-shadow: 0 8px 32px rgba(234,179,8,0.18);
+        transform: translateY(-8px) scale(1.04);
+        border: 1.5px solid #eab308;
+      }
+      .service-card-modern span i {
+        font-size: 2.4rem;
+        color: #eab308;
+        margin-bottom: 0.7rem;
+      }
+      .service-card-modern h3 {
+        font-size: 1.32rem;
+        font-weight: 700;
+        color: #181818;
+        margin-bottom: 0.7rem;
+        margin-top: 0.2rem;
+        font-family: 'Inter', Arial, sans-serif;
+      }
+      .service-desc {
+        color: #444;
+        margin-bottom: 1.1rem;
+        font-size: 1.13rem;
+        line-height: 1.7;
+        flex: 1 1 auto;
+        font-family: 'Inter', Arial, sans-serif;
+      }
+      .service-card-modern .angel {
+        position: absolute;
+        right: 1.2rem;
+        bottom: 1.2rem;
+        color: #eab308;
+        font-size: 1.2rem;
+        opacity: 0.7;
+      }
+      @media (max-width: 1200px) {
+        .services-cards-row {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 900px) {
+        .services-cards-row {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          align-items: center;
+        }
+        .service-card-modern {
+          max-width: 98vw;
+          min-height: 320px;
+          padding: 2rem 1.2rem 1.5rem 1.2rem;
+        }
+      }
+    </style>
+     <!-- Resume Section Modernization -->
+<section id="resume" class="resume-section-modern">
+  <div class="resume-modern-container">
+    <div class="resume-modern-title">
+      <h2>Resume</h2>
+      <p>Experienced full-stack web developer with strong skills in back-end and front-end technologies, specialized in developing high-performance web applications and handling complex projects in various domains such as travel, customer assistance, and telecommunications.</p>
+    </div>
+    <div class="resume-modern-grid">
+      <!-- Experience Cards -->
+      <div class="resume-modern-card">
+        <div class="resume-modern-icon"><i class="bi bi-briefcase"></i></div>
+        <h4>Fullstack web developer</h4>
+        <div class="resume-modern-meta">CHIFCO, Sahloul, Sousse</div>
+        <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> 6 June 2023 - Present</div>
+        <ul>
+          <li><strong>Ferry Project:</strong> Developed a reservation system for cruise tickets using Symfony and Angular, including invoice generation and secure payment integration.</li>
+          <li><strong>GA Application:</strong> Developed a customer assistance web application using Spring Boot and Angular, integrated Google Maps for tracking, and implemented Firebase notifications.</li>
+          <li><strong>Netty CRM Application:</strong> Built a subscription management system, automated invoice generation with cron jobs, and used WebSocket (STOMP) for real-time updates.</li>
+        </ul>
+      </div>
+      <div class="resume-modern-card">
+        <div class="resume-modern-icon"><i class="bi bi-briefcase"></i></div>
+        <h4>Spring Boot Developer</h4>
+        <div class="resume-modern-meta">BILLCOM, Khzama, Sousse, Tunisie</div>
+        <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> February 2022 - June 2022</div>
+        <ul>
+          <li>Designed and developed two telecom projects using Spring Boot and Angular for service order supervision and service management automation.</li>
+          <li><strong>Supervision des Ordres de Service TELECOM:</strong> Processed XML files using Spring Batch, automated data processing, and built a tracing system for service orders.</li>
+          <li><strong>Gestion des Services TELECOM:</strong> Created a dashboard with service activation and deactivation functionalities and error handling features for mobile and fixed-line services.</li>
+        </ul>
+      </div>
+      <div class="resume-modern-card">
+        <div class="resume-modern-icon"><i class="bi bi-briefcase"></i></div>
+        <h4>Spring Boot Developer</h4>
+        <div class="resume-modern-meta">BILLCOM, Khzama, Sousse, Tunisie</div>
+        <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> Décembre 2021 - Janvier 2022</div>
+        <p>Developed a complete web application for user management and telecom service communication using Spring Boot and Angular, focusing on security and user experience.</p>
+      </div>
+      <!-- Education Cards -->
+      <div class="resume-modern-card">
+        <div class="resume-modern-icon"><i class="bi bi-mortarboard"></i></div>
+        <h4>Software Engineer</h4>
+        <div class="resume-modern-meta">EPI: International Multidisciplinary School</div>
+        <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> August 2022</div>
+        <p>Graduated in Computer Engineering with skills in full-stack development, focusing on modern web technologies and software architecture.</p>
+      </div>
+      <div class="resume-modern-card">
+        <div class="resume-modern-icon"><i class="bi bi-mortarboard"></i></div>
+        <h4>Civil Engineering</h4>
+        <div class="resume-modern-meta">ENIG: National Institute of Engineers of Gabes</div>
+        <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> June 2013</div>
+        <p>Completed studies in Civil Engineering, focusing on structural design and project management, before transitioning to the IT field.</p>
+      </div>
+      <!-- Academic Projects Card -->
+      <div class="resume-modern-card">
+        <div class="resume-modern-icon"><i class="bi bi-lightbulb"></i></div>
+        <h4>Academic Projects</h4>
+        <div class="resume-modern-meta">EPI: International Multidisciplinary School</div>
+        <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> 2020 - 2022</div>
+        <ul>
+          <li><strong>Symfony 4.2:</strong> Developed a university management web application with private messaging and a blog platform with user and article management.</li>
+          <li><strong>Spring Boot Thymeleaf:</strong> Created a blog platform with user management and article creation functionality.</li>
+          <li><strong>Ionic:</strong> Built a showcase website for a construction company.</li>
+          <li><strong>Android (Kotlin):</strong> Developed an app that displays a list of images and shows user coordinates.</li>
+          <li><strong>Laravel:</strong> Built an order management system for a pastry shop with recipe management.</li>
+          <li><strong>.NET (MVC):</strong> Implemented an e-commerce web application with user and cart management.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .resume-section-modern {
+    background: #fff;
+    padding: 5rem 0 4rem 0;
+    border-radius: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 24px rgba(24,24,24,0.06);
+    font-family: 'Inter', Arial, sans-serif;
+    animation: fadeInUp 1.1s cubic-bezier(.77,0,.18,1);
+  }
+  .resume-modern-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2vw;
+  }
+  .resume-modern-title h2 {
+    color: #181818;
+    font-size: 2.3rem;
+    font-weight: 900;
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.01em;
+    text-align: center;
+  }
+  .resume-modern-title p {
+    color: #444;
+    font-size: 1.18rem;
+    max-width: 700px;
+    margin: 0 auto 2.2rem auto;
+    line-height: 1.7;
+    text-align: center;
+  }
+  .resume-modern-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.8rem 2.2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  .resume-modern-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 1.7rem;
+    box-shadow: 0 8px 32px rgba(24,24,24,0.10), 0 2px 16px rgba(234,179,8,0.10);
+    border-left: 5px solid #eab308;
+    padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+    min-width: 0;
+    min-height: 320px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: 'Inter', Arial, sans-serif;
+    transition: box-shadow 0.25s, transform 0.25s, border 0.25s, background 0.25s;
+    will-change: transform, box-shadow;
+    animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+  }
+  .resume-modern-card:hover {
+    box-shadow: 0 16px 48px rgba(234,179,8,0.18), 0 4px 24px rgba(24,24,24,0.10);
+    transform: translateY(-10px) scale(1.04);
+    border-left: 5px solid #fff700;
+    background: rgba(255,255,255,1);
+  }
+  .resume-modern-icon {
+    font-size: 2.3rem;
+    color: #eab308;
+    margin-bottom: 1.2rem;
+    z-index: 1;
+    align-self: center;
+  }
+  .resume-modern-card h4 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #181818;
+    margin-bottom: 0.5rem;
+    z-index: 1;
+    text-align: left;
+    font-family: 'Inter', Arial, sans-serif;
+  }
+  .resume-modern-meta {
+    color: #888;
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+    font-family: 'Inter', Arial, sans-serif;
+  }
+  .resume-modern-date {
+    color: #888;
+    font-size: 0.98rem;
+    margin-bottom: 0.7rem;
+    font-family: 'Inter', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .resume-modern-card p,
+  .resume-modern-card ul,
+  .resume-modern-card ul li {
+    color: #333;
+    font-size: 1.13rem;
+    line-height: 1.8;
+    font-family: 'Inter', Arial, sans-serif;
+    margin-bottom: 1.1em;
+    margin-top: 0.2em;
+  }
+  .resume-modern-card p {
+    font-style: italic;
+    font-weight: 500;
+    background: #f8f8f8;
+    border-radius: 0.7em;
+    padding: 0.7em 1em;
+    color: #444;
+    margin-bottom: 1.2em;
+    margin-top: 0.2em;
+  }
+  .resume-modern-card ul li {
+    font-style: normal;
+    font-weight: 400;
+    background: none;
+    padding: 0;
+    margin-bottom: 0.7em;
+    color: #333;
+  }
+  .resume-modern-card .mb-2 {
+    margin-bottom: 0.5rem !important;
+  }
+  @media (max-width: 991px) {
+    .resume-modern-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .resume-modern-card {
+      min-height: 220px;
+      padding: 1.5rem 1rem 1.2rem 1rem;
+    }
+    .resume-modern-icon {
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 700px) {
+    .resume-modern-grid {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+    .resume-section-modern {
+      padding: 2rem 0 1.5rem 0;
+    }
+    .resume-modern-title h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style> 
+  
+  
+    <!-- START SECTION CONTACT -->
+    <section class="contact contact-modern" id="contact">
+      <div class="container contact-modern-container">
+        <div class="headers--holder">
+          <span class="intro--span">CONTACT</span>
+          <h2 class="intro--header">Get In Touch</h2>
+        </div>
+        <div class="contact-content contact-modern-content">
+          <div class="contact-info contact-modern-info">
+            <ul>
+              <li><i class="fa-solid fa-map"></i> Street Bir guiida, Kalaa kebira Sousse, Tunisia</li>
+              <li><i class="fa-solid fa-phone"></i> +216 58 273 086</li>
+              <li><i class="fa-solid fa-envelope"></i> abidoussama2015@gmail.com</li>
+            </ul>
+          </div>
+          <div class="contact-form contact-modern-form">
+            <form action="#" method="post">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <input type="text" name="subject" placeholder="Subject" required />
+              <textarea name="message" placeholder="Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .contact-modern {
+        background: linear-gradient(135deg, #fffbe6 0%, #f7c873 100%);
+        width: 100%;
+        padding: 4rem 0 3rem 0;
+        border-radius: 2.5rem;
+        margin-bottom: 2.5rem;
+        box-shadow: 0 4px 24px rgba(234,179,8,0.07);
+        animation: fadeInUp 1.1s cubic-bezier(.77,0,.18,1);
+      }
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(40px); }
+        to { opacity: 1; transform: none; }
+      }
+      .contact-modern-container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .contact-modern-content {
+        display: flex;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2.2rem;
+      }
+      .contact-modern-info {
+        flex: 0 0 320px;
+        background: #fff;
+        border-radius: 1.5rem;
+        box-shadow: 0 2px 16px rgba(234,179,8,0.10);
+        padding: 2.2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 1.08rem;
+        color: #181818;
+        animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+      }
+      .contact-modern-info ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .contact-modern-info li {
+        margin-bottom: 1.1em;
+        display: flex;
+        align-items: center;
+        gap: 0.7em;
+        color: #444;
+      }
+      .contact-modern-info i {
+        color: #eab308;
+        font-size: 1.2em;
+      }
+      .contact-modern-form {
+        flex: 1 1 380px;
+        background: #fff;
+        border-radius: 1.5rem;
+        box-shadow: 0 2px 16px rgba(234,179,8,0.10);
+        padding: 2.2rem 2rem 2rem 2rem;
+        animation: fadeInUp 1.2s cubic-bezier(.77,0,.18,1) 0.3s both;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .contact-modern-form form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.1em;
+      }
+      .contact-modern-form input,
+      .contact-modern-form textarea {
+        width: 100%;
+        padding: 0.9em 1.1em;
+        border-radius: 1em;
+        border: 1.5px solid #eab30833;
+        background: #fffbe6;
+        font-size: 1.08em;
+        color: #181818;
+        transition: border 0.18s, box-shadow 0.18s;
+        outline: none;
+        box-shadow: 0 1px 4px rgba(234,179,8,0.07);
+        resize: none;
+      }
+      .contact-modern-form input:focus,
+      .contact-modern-form textarea:focus {
+        border: 1.5px solid #eab308;
+        box-shadow: 0 2px 12px rgba(234,179,8,0.13);
+      }
+      .contact-modern-form textarea {
+        min-height: 120px;
+        max-height: 260px;
+      }
+      .contact-modern-form button {
+        background: #eab308;
+        color: #fffbe6;
+        border: none;
+        border-radius: 2em;
+        padding: 0.8em 2.2em;
+        font-size: 1.13em;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(234,179,8,0.07);
+        transition: background 0.18s, color 0.18s, transform 0.18s;
+        margin-top: 0.5em;
+      }
+      .contact-modern-form button:hover {
+        background: #fffbe6;
+        color: #eab308;
+        transform: scale(1.04);
+        border: 2px solid #eab308;
+      }
+      @media (max-width: 900px) {
+        .contact-modern-content {
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+        .contact-modern-info, .contact-modern-form {
+          max-width: 98vw;
+        }
+      }
+    </style>
+    <!-- START FOOTER -->
+    <footer class="footer-modern">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-col brand-col">
+            <h2><a href="#">Abid Oussama</a></h2>
+            <p>Software Engineer & Web Developer based in Sousse, Tunisia.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><span><i class="fa-brands fa-facebook-f"></i></span></a>
+              <a href="#" aria-label="Twitter"><span><i class="fa-brands fa-twitter"></i></span></a>
+              <a href="#" aria-label="Instagram"><span><i class="fa-brands fa-instagram"></i></span></a>
+              <a href="#" aria-label="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#services">Services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Info</h3>
+            <ul>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#services">Services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col address-col">
+            <h3>Have a question?</h3>
+            <ul class="footer-address">
+              <li><span><i class="fa-solid fa-map"></i></span> Street Bir guiida, Kalaa kebira Sousse, Tunisia</li>
+              <li><span><i class="fa-solid fa-phone"></i></span> +216 58 273 086</li>
+              <li><span><i class="fa-solid fa-paper-plane"></i></span> abidoussama2015@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2024 Abid Oussama. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+    <style>
+      .footer-modern {
+        background: #fffbe6;
+        color: #181818;
+        padding: 0;
+        border-top: 1.5px solid #f7c873;
+        font-family: 'Inter', Arial, sans-serif;
+      }
+      .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 3.5rem 2vw 1.5rem 2vw;
+      }
+      .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem 2rem;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .footer-col {
+        flex: 1 1 180px;
+        min-width: 160px;
+        margin-bottom: 1.5rem;
+      }
+      .brand-col {
+        flex: 1 1 260px;
+        min-width: 220px;
+      }
+      .footer-col h3, .brand-col h2 {
+        color: #181818;
+        font-size: 1.18rem;
+        font-weight: 800;
+        margin-bottom: 1.1rem;
+        letter-spacing: 0.01em;
+      }
+      .brand-col h2 a {
+        color: #181818;
+        text-decoration: none;
+        font-size: 1.35rem;
+        font-weight: 900;
+        letter-spacing: 0.01em;
+      }
+      .footer-col ul, .footer-address {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-col ul li, .footer-address li {
+        margin-bottom: 0.7em;
+      }
+      .footer-col ul li a {
+        color: #444;
+        text-decoration: none;
+        font-size: 1.05em;
+        transition: color 0.18s;
+      }
+      .footer-col ul li a:hover {
+        color: #eab308;
+      }
+      .footer-address li {
+        display: flex;
+        align-items: center;
+        gap: 0.7em;
+        color: #444;
+        font-size: 1.05em;
+      }
+      .footer-address i {
+        color: #eab308;
+        font-size: 1.2em;
+      }
+      .footer-social {
+        display: flex;
+        gap: 0.7em;
+        margin-top: 1.1em;
+      }
+      .footer-social a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #fff;
+        color: #eab308;
+        font-size: 1.25em;
+        box-shadow: 0 2px 8px rgba(234,179,8,0.07);
+        transition: background 0.18s, color 0.18s, transform 0.18s;
+        border: 2px solid #fffbe6;
+      }
+      .footer-social a:hover {
+        background: #eab308;
+        color: #fffbe6;
+        transform: scale(1.08);
+        border: 2px solid #eab308;
+      }
+      .footer-bottom {
+        text-align: center;
+        color: #888;
+        font-size: 1.01em;
+        margin-top: 2.5rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid #f7c873;
+      }
+      @media (max-width: 900px) {
+        .footer-row {
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+        .footer-col, .brand-col {
+          max-width: 98vw;
+        }
+      }
+    </style>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top" style="position:fixed; right:2.2rem; bottom:2.2rem; width:54px; height:54px; background:#fffbe6; color:#eab308; border-radius:50%; box-shadow:0 2px 16px rgba(234,179,8,0.13); display:flex; align-items:center; justify-content:center; font-size:2.1rem; z-index:9999; border:2px solid #f7c873; transition:background 0.18s, color 0.18s, box-shadow 0.18s; cursor:pointer; opacity:1;">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <style>
+      .scroll-top:hover {
+        background: #eab308;
+        color: #fffbe6;
+        box-shadow: 0 6px 32px rgba(234,179,8,0.23);
+      }
+      @media (max-width: 700px) {
+        #scroll-top { right: 1rem !important; bottom: 1rem !important; width: 44px !important; height: 44px !important; font-size: 1.5rem !important; }
+      }
+    </style>
+    <script>
+      document.getElementById('scroll-top').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      // Always visible when scrolling
+      // Optionally, you can hide it at the very top if you want:
+      // window.addEventListener('scroll', function() {
+      //   document.getElementById('scroll-top').style.opacity = window.scrollY > 100 ? 1 : 0;
+      // });
+    </script>
+   

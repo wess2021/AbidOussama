@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- index-personal2.html: Blue & White Modern Portfolio -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abid Oussama - Portfolio (Blue Theme)</title>
+    <link rel="icon" href="assets/img/code1.jpg" />
+    <!-- START MAIN CSS FILE -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Custom Blue Modern Styles -->
+    <link rel="stylesheet" href="assets/css/index-personal2.css" />
+    <!-- START FONTAESOME LIBRARY CSS FILE -->
+    <link rel="stylesheet" href="assets/css/vendors/all.min.css" />
+  </head>
+  <body>
+    <!-- HEADER, NAV, HERO, ABOUT, STATS, SERVICES, RESUME, PORTFOLIO, CONTACT, FOOTER, SCROLLTOP -->
+    <!-- Copy the structure from index-personal.html, but use only the modernized classes (about-modern, stats-pro-container, etc.) -->
+    <!-- All styling and color palette will be handled in index-personal2.css -->
+    <!-- ... (copy/paste the full structure from index-personal.html here, but reference the new CSS) ... -->
+    <!-- START HEADER -->
+    <header>
+      <div class="contact__header">
+        <div class="container">
+          <ul class="direct">
+            <li>
+              <span class="contact-label">Phone no:</span>
+              <a href="tel:+21658273086">+216 58 273 086</a>
+            </li>
+            <li>
+              <span class="contact-label">or email us:</span>
+              <a href="mailto:abidoussama2015@gmail.com">abidoussama2015@gmail.com</a>
+            </li>
+          </ul>
+          <div class="social" aria-label="Social Links">
+            <a href="#" aria-label="Facebook"><span><i class="fa-brands fa-facebook-f"></i></span></a>
+            <a href="#" aria-label="Twitter"><span><i class="fa-brands fa-twitter"></i></span></a>
+            <a href="#" aria-label="Instagram"><span><i class="fa-brands fa-instagram"></i></span></a>
+            <a href="#" aria-label="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span></a>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar-sticky">
+        <div class="container">
+          <a class="logo" href="#home">Abid Oussama</a>
+          <ul class="navbar-links">
+            <li><a href="#home" class="active">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header__intro hero-modern" id="home">
+        <div class="container hero-content">
+          <span class="hero-welcome">Welcome to my portfolio</span>
+          <h1 class="hero-title">Abid Oussama</h1>
+          <p class="hero-desc">
+            I'm a Software Engineer & Web Developer passionate about building efficient, scalable, and user-friendly applications.
+          </p>
+          <div class="hero-btn-row">
+            <a href="#contact" class="cta-btn">Let’s Connect</a>
+            <a href="#portfolio" class="cta-btn secondary">View Portfolio</a>
+          </div>
+        </div>
+      </div>
+      <ul class="bullets">
+        <li><span class="active"></span></li>
+        <li><span></span></li>
+      </ul>
+    </header>
+    <!-- START SECTION ABOUT -->
+    <section class="about about-modern" id="about">
+      <div class="container about-container">
+        <div class="about-img-col">
+          <div class="about-img-wrapper">
+            <img src="assets/img/profile1.jpg" alt="Abid Oussama" class="about-img-circle" />
+          </div>
+        </div>
+        <div class="about-intro-col">
+          <div class="headers--holder">
+            <span class="intro--span">ABOUT ME</span>
+            <h2 class="intro--header">Software Engineer & Web Developer</h2>
+          </div>
+          <p class="about-desc">
+            I am a dedicated software engineer with expertise in web development and problem-solving. My passion lies in creating efficient and scalable applications, combining functionality with an intuitive user experience.
+          </p>
+          <div class="about-highlights-row">
+            <div class="about-highlight-card">
+              <span class="about-highlight-icon"><i class="fa-regular fa-lightbulb"></i></span>
+              <div>
+                <span class="about-highlight-value">35</span>
+                <span class="about-highlight-label">YEARS OLD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Stats Section Modernized (now inside About Me) -->
+      <div class="stats-pro-container" style="margin-top:2.5rem;">
+        <div class="stats-pro-grid">
+          <div class="stats-pro-card fadeInUp-anim">
+            <div class="stats-pro-icon"><i class="bi bi-emoji-smile"></i></div>
+            <div class="stats-pro-number" data-count="60">0</div>
+            <div class="stats-pro-label">Happy Clients</div>
+          </div>
+          <div class="stats-pro-card fadeInUp-anim">
+            <div class="stats-pro-icon"><i class="bi bi-journal-richtext"></i></div>
+            <div class="stats-pro-number" data-count="15">0</div>
+            <div class="stats-pro-label">Completed Projects</div>
+          </div>
+          <div class="stats-pro-card fadeInUp-anim">
+            <div class="stats-pro-icon"><i class="bi bi-headset"></i></div>
+            <div class="stats-pro-number" data-count="2100">0</div>
+            <div class="stats-pro-label">Hours of Support</div>
+          </div>
+          <div class="stats-pro-card fadeInUp-anim">
+            <div class="stats-pro-icon"><i class="bi bi-people"></i></div>
+            <div class="stats-pro-number" data-count="10">0</div>
+            <div class="stats-pro-label">Team Members</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+    // Stats count-up animation (on scroll into view)
+    function animateStats() {
+      const stats = document.querySelectorAll('.stats-pro-number');
+      let triggered = false;
+      function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top < window.innerHeight && rect.bottom > 0
+        );
+      }
+      function runAnimation() {
+        if (triggered) return;
+        if (stats.length && isInViewport(stats[0])) {
+          triggered = true;
+          stats.forEach(function(el) {
+            const end = +el.getAttribute('data-count');
+            let start = 0;
+            const duration = 1200;
+            const step = Math.ceil(end / (duration / 16));
+            function update() {
+              start += step;
+              if (start > end) start = end;
+              el.textContent = start;
+              if (start < end) requestAnimationFrame(update);
+            }
+            update();
+          });
+        }
+      }
+      window.addEventListener('scroll', runAnimation);
+      window.addEventListener('DOMContentLoaded', runAnimation);
+    }
+    animateStats();
+    </script>
+    <!-- Skills Section Modernized -->
+    <section id="skills" class="skills-section-pro">
+      <div class="skills-pro-container">
+        <div class="skills-pro-title">
+          <h2>Skills</h2>
+          <p>Proficient in full-stack development, leveraging a variety of technologies to build robust applications across various domains such as e-commerce, mobile applications, and web platforms.</p>
+        </div>
+        <div class="skills-pro-content">
+          <div class="skills-pro-categories">
+            <div class="skills-pro-category">
+              <div class="skills-pro-cat-icon"><i class="fa-solid fa-code"></i></div>
+              <div class="skills-pro-cat-label">Programming Languages</div>
+            </div>
+            <div class="skills-pro-category">
+              <div class="skills-pro-cat-icon"><i class="fa-solid fa-layer-group"></i></div>
+              <div class="skills-pro-cat-label">Frameworks</div>
+            </div>
+            <div class="skills-pro-category">
+              <div class="skills-pro-cat-icon"><i class="fa-solid fa-database"></i></div>
+              <div class="skills-pro-cat-label">Databases</div>
+            </div>
+          </div>
+          <div class="skills-pro-bars">
+            <div class="skills-pro-bar">
+              <span>HTML/CSS</span>
+              <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="90"></div></div>
+              <span class="skills-pro-bar-val">90%</span>
+            </div>
+            <div class="skills-pro-bar">
+              <span>JavaScript</span>
+              <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="75"></div></div>
+              <span class="skills-pro-bar-val">75%</span>
+            </div>
+            <div class="skills-pro-bar">
+              <span>PHP</span>
+              <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="80"></div></div>
+              <span class="skills-pro-bar-val">80%</span>
+            </div>
+            <div class="skills-pro-bar">
+              <span>Java</span>
+              <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="95"></div></div>
+              <span class="skills-pro-bar-val">95%</span>
+            </div>
+            <div class="skills-pro-bar">
+              <span>C#</span>
+              <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="70"></div></div>
+              <span class="skills-pro-bar-val">70%</span>
+            </div>
+            <div class="skills-pro-bar">
+              <span>Laravel</span>
+              <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="80"></div></div>
+              <span class="skills-pro-bar-val">80%</span>
+            </div>
+            <div class="skills-pro-bar">
+              <span>Symfony</span>
+              <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="85"></div></div>
+              <span class="skills-pro-bar-val">85%</span>
+            </div>
+            <div class="skills-pro-bar">
+              <span>Vue.js</span>
+              <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="75"></div></div>
+              <span class="skills-pro-bar-val">75%</span>
+            </div>
+            <div class="skills-pro-bar">
+              <span>.NET MVC</span>
+              <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="80"></div></div>
+              <span class="skills-pro-bar-val">80%</span>
+            </div>
+            <div class="skills-pro-bar">
+              <span>MySQL</span>
+              <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="90"></div></div>
+              <span class="skills-pro-bar-val">90%</span>
+            </div>
+            <div class="skills-pro-bar">
+              <span>MongoDB</span>
+              <div class="skills-pro-bar-outer"><div class="skills-pro-bar-inner" data-width="70"></div></div>
+              <span class="skills-pro-bar-val">70%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+    // Skills bar animation
+    function animateSkillsBars() {
+      document.querySelectorAll('.skills-pro-bar-inner').forEach(function(bar) {
+        const width = bar.getAttribute('data-width');
+        bar.style.width = '0%';
+        setTimeout(() => { bar.style.width = width + '%'; }, 300);
+      });
+    }
+    window.addEventListener('DOMContentLoaded', animateSkillsBars);
+    </script>
+    <!-- START SECTION SERVICES -->
+    <section class="services services-modern" id="services">
+      <div class="container">
+        <div class="services-header">
+          <h2>WHAT I DO</h2>
+          <p>
+            As a versatile software engineer and web developer, I offer a range of services designed to help businesses and individuals harness the power of technology and create exceptional digital experiences.
+          </p>
+        </div>
+        <div class="services-cards-row">
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-code"></i></span>
+            <h3>WEB DEVELOPMENT</h3>
+            <p class="service-desc">I build responsive, user-friendly websites and web applications using modern technologies like HTML5, CSS3, JavaScript, and frameworks like Spring Boot, Vue.js, and Angular.</p>
+            <span class="angel active"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-paint-brush"></i></span>
+            <h3>UI/UX DESIGN</h3>
+            <p class="service-desc">I focus on creating intuitive user interfaces and seamless user experiences, ensuring that users can easily interact with digital products.</p>
+            <span class="angel"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-cogs"></i></span>
+            <h3>SOFTWARE ENGINEERING</h3>
+            <p class="service-desc">I offer full-stack software development services, creating scalable and maintainable solutions for businesses, with experience in back-end technologies and database management.</p>
+            <span class="angel"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-network-wired"></i></span>
+            <h3>API DEVELOPMENT</h3>
+            <p class="service-desc">Designing and implementing robust APIs for seamless integration between various systems, enabling communication and data exchange in a secure manner.</p>
+            <span class="angel"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-shopping-cart"></i></span>
+            <h3>E-COMMERCE SOLUTIONS</h3>
+            <p class="service-desc">Helping businesses establish their online presence through e-commerce development, including PrestaShop and custom online stores, with a focus on functionality and security.</p>
+            <span class="angel"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+          <div class="single service-card-modern">
+            <span><i class="fa-solid fa-chalkboard-teacher"></i></span>
+            <h3>CONSULTING & TRAINING</h3>
+            <p class="service-desc">Providing personalized consulting and training services to help teams improve their development processes, adopt best practices, and stay updated with the latest technologies.</p>
+            <span class="angel"><i class="fa-solid fa-angle-right"></i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Resume Section Modernization -->
+    <section id="resume" class="resume-section-modern">
+      <div class="resume-modern-container">
+        <div class="resume-modern-title">
+          <h2>Resume</h2>
+          <p>Experienced full-stack web developer with strong skills in back-end and front-end technologies, specialized in developing high-performance web applications and handling complex projects in various domains such as travel, customer assistance, and telecommunications.</p>
+        </div>
+        <div class="resume-modern-grid">
+          <!-- Experience Cards -->
+          <div class="resume-modern-card">
+            <div class="resume-modern-icon"><i class="bi bi-briefcase"></i></div>
+            <h4>Fullstack web developer</h4>
+            <div class="resume-modern-meta">CHIFCO, Sahloul, Sousse</div>
+            <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> 6 June 2023 - Present</div>
+            <ul>
+              <li><strong>Ferry Project:</strong> Developed a reservation system for cruise tickets using Symfony and Angular, including invoice generation and secure payment integration.</li>
+              <li><strong>GA Application:</strong> Developed a customer assistance web application using Spring Boot and Angular, integrated Google Maps for tracking, and implemented Firebase notifications.</li>
+              <li><strong>Netty CRM Application:</strong> Built a subscription management system, automated invoice generation with cron jobs, and used WebSocket (STOMP) for real-time updates.</li>
+            </ul>
+          </div>
+          <div class="resume-modern-card">
+            <div class="resume-modern-icon"><i class="bi bi-briefcase"></i></div>
+            <h4>Spring Boot Developer</h4>
+            <div class="resume-modern-meta">BILLCOM, Khzama, Sousse, Tunisie</div>
+            <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> February 2022 - June 2022</div>
+            <ul>
+              <li>Designed and developed two telecom projects using Spring Boot and Angular for service order supervision and service management automation.</li>
+              <li><strong>Supervision des Ordres de Service TELECOM:</strong> Processed XML files using Spring Batch, automated data processing, and built a tracing system for service orders.</li>
+              <li><strong>Gestion des Services TELECOM:</strong> Created a dashboard with service activation and deactivation functionalities and error handling features for mobile and fixed-line services.</li>
+            </ul>
+          </div>
+          <div class="resume-modern-card">
+            <div class="resume-modern-icon"><i class="bi bi-briefcase"></i></div>
+            <h4>Spring Boot Developer</h4>
+            <div class="resume-modern-meta">BILLCOM, Khzama, Sousse, Tunisie</div>
+            <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> Décembre 2021 - Janvier 2022</div>
+            <p>Developed a complete web application for user management and telecom service communication using Spring Boot and Angular, focusing on security and user experience.</p>
+          </div>
+          <!-- Education Cards -->
+          <div class="resume-modern-card">
+            <div class="resume-modern-icon"><i class="bi bi-mortarboard"></i></div>
+            <h4>Software Engineer</h4>
+            <div class="resume-modern-meta">EPI: International Multidisciplinary School</div>
+            <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> August 2022</div>
+            <p>Graduated in Computer Engineering with skills in full-stack development, focusing on modern web technologies and software architecture.</p>
+          </div>
+          <div class="resume-modern-card">
+            <div class="resume-modern-icon"><i class="bi bi-mortarboard"></i></div>
+            <h4>Civil Engineering</h4>
+            <div class="resume-modern-meta">ENIG: National Institute of Engineers of Gabes</div>
+            <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> June 2013</div>
+            <p>Completed studies in Civil Engineering, focusing on structural design and project management, before transitioning to the IT field.</p>
+          </div>
+          <!-- Academic Projects Card -->
+          <div class="resume-modern-card">
+            <div class="resume-modern-icon"><i class="bi bi-lightbulb"></i></div>
+            <h4>Academic Projects</h4>
+            <div class="resume-modern-meta">EPI: International Multidisciplinary School</div>
+            <div class="resume-modern-date"><i class="bi bi-calendar-event"></i> 2020 - 2022</div>
+            <ul>
+              <li><strong>Symfony 4.2:</strong> Developed a university management web application with private messaging and a blog platform with user and article management.</li>
+              <li><strong>Spring Boot Thymeleaf:</strong> Created a blog platform with user management and article creation functionality.</li>
+              <li><strong>Ionic:</strong> Built a showcase website for a construction company.</li>
+              <li><strong>Android (Kotlin):</strong> Developed an app that displays a list of images and shows user coordinates.</li>
+              <li><strong>Laravel:</strong> Built an order management system for a pastry shop with recipe management.</li>
+              <li><strong>.NET (MVC):</strong> Implemented an e-commerce web application with user and cart management.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Highlights Section (Full Width) -->
+    <section class="portfolio-highlights-modern" style="width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;background:rgba(234,179,8,0.07);padding:4rem 0 3rem 0;">
+      <div class="portfolio-highlights-inner">
+        <h3 class="portfolio-highlights-title-modern">Portfolio Highlights</h3>
+        <div class="portfolio-highlights-grid-modern">
+          <div class="portfolio-highlight-card-modern">
+            <div class="portfolio-img-wrapper-modern">
+              <img src="assets/img/portfolio/app1.jpg" alt="App Général assistance project screenshot" />
+              <div class="portfolio-img-overlay-modern"><span>App Général assistance</span></div>
+            </div>
+          </div>
+          <div class="portfolio-highlight-card-modern">
+            <div class="portfolio-img-wrapper-modern">
+              <img src="assets/img/portfolio/netyweb10.png" alt="Nety web project screenshot" />
+              <div class="portfolio-img-overlay-modern"><span>Nety web</span></div>
+            </div>
+          </div>
+          <div class="portfolio-highlight-card-modern">
+            <div class="portfolio-img-wrapper-modern">
+              <img src="assets/img/portfolio/app2.jpg" alt="App Général assistance towing service screenshot" />
+              <div class="portfolio-img-overlay-modern"><span>App Général assistance</span></div>
+            </div>
+          </div>
+          <div class="portfolio-highlight-card-modern">
+            <div class="portfolio-img-wrapper-modern">
+              <img src="assets/img/portfolio/app8.png" alt="Nety App internet provider screenshot" />
+              <div class="portfolio-img-overlay-modern"><span>Nety App</span></div>
+            </div>
+          </div>
+          <div class="portfolio-highlight-card-modern">
+            <div class="portfolio-img-wrapper-modern">
+              <img src="assets/img/portfolio/netyweb11.png" alt="Nety web internet provider screenshot" />
+              <div class="portfolio-img-overlay-modern"><span>Nety web</span></div>
+            </div>
+          </div>
+          <div class="portfolio-highlight-card-modern">
+            <div class="portfolio-img-wrapper-modern">
+              <img src="assets/img/portfolio/crm web1.png" alt="Nety web CRM screenshot" />
+              <div class="portfolio-img-overlay-modern"><span>Nety web CRM</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- START SECTION CONTACT -->
+    <section class="contact contact-modern" id="contact">
+      <div class="container contact-modern-container">
+        <div class="headers--holder">
+          <span class="intro--span">CONTACT</span>
+          <h2 class="intro--header">Get In Touch</h2>
+        </div>
+        <div class="contact-content contact-modern-content">
+          <div class="contact-info contact-modern-info">
+            <ul>
+              <li><i class="fa-solid fa-map"></i> Street Bir guiida, Kalaa kebira Sousse, Tunisia</li>
+              <li><i class="fa-solid fa-phone"></i> +216 58 273 086</li>
+              <li><i class="fa-solid fa-envelope"></i> abidoussama2015@gmail.com</li>
+            </ul>
+          </div>
+          <div class="contact-form contact-modern-form">
+            <form action="#" method="post">
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <input type="text" name="subject" placeholder="Subject" required />
+              <textarea name="message" placeholder="Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- START FOOTER -->
+    <footer class="footer-modern">
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-col brand-col">
+            <h2><a href="#">Abid Oussama</a></h2>
+            <p>Software Engineer & Web Developer based in Sousse, Tunisia.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><span><i class="fa-brands fa-facebook-f"></i></span></a>
+              <a href="#" aria-label="Twitter"><span><i class="fa-brands fa-twitter"></i></span></a>
+              <a href="#" aria-label="Instagram"><span><i class="fa-brands fa-instagram"></i></span></a>
+              <a href="#" aria-label="LinkedIn"><span><i class="fa-brands fa-linkedin"></i></span></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#services">Services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Info</h3>
+            <ul>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#services">Services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col address-col">
+            <h3>Have a question?</h3>
+            <ul class="footer-address">
+              <li><span><i class="fa-solid fa-map"></i></span> Street Bir guiida, Kalaa kebira Sousse, Tunisia</li>
+              <li><span><i class="fa-solid fa-phone"></i></span> +216 58 273 086</li>
+              <li><span><i class="fa-solid fa-paper-plane"></i></span> abidoussama2015@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2024 Abid Oussama. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll Top -->
+    <a href="#" id="scroll-top" class="scroll-top" style="position:fixed; right:2.2rem; bottom:2.2rem; width:54px; height:54px; background:#fffbe6; color:#eab308; border-radius:50%; box-shadow:0 2px 16px rgba(234,179,8,0.13); display:flex; align-items:center; justify-content:center; font-size:2.1rem; z-index:9999; border:2px solid #f7c873; transition:background 0.18s, color 0.18s, box-shadow 0.18s; cursor:pointer; opacity:1;">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <script>
+      document.getElementById('scroll-top').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html> 

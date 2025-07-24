@@ -1,0 +1,123 @@
+/* TODO START: ROOT */
+:root {
+  --black-color: #000;
+  --second-black: #000000cc;
+  --third-black: #232429;
+  --white-color: #ffffff;
+  --second-white: #ffffffe6;
+  --third-white: #ffffffb3;
+  --gray-color: #999999;
+  --secondry-color: #cdb30c;
+  --another-secondry: #9d8909;
+  --first--section-bg: #f4f5f9;
+  --second--section-bg: #232429;
+  --footer-color: #1e1f23;
+}
+/* TODO END: ROOT */
+.container,
+.container--two {
+  width: 80%;
+  margin: 0 auto;
+}
+.intro--span {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 15px px;
+  font-weight: 600;
+  color: var(--secondry-color);
+  text-transform: uppercase;
+}
+.intro--header {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--second-black);
+}
+/* COMPONENT OF SECTIONS TEAM & PORTFOLIO */
+& .headers--holder {
+  width: 450px;
+  & .intro--header {
+    margin: 15px 0 24px;
+  }
+}
+& .view--btn--holder {
+  & a {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border: 2px solid var(--secondry-color);
+    padding: 5px 10px;
+    color: var(--secondry-color);
+  }
+}
+
+/* START BREAD CRUMBS COMPONENT */
+.bread__crumb {
+  background-image: url(../../../content/images/bg_4.jpg);
+  &::after {
+    opacity: 0.5;
+  }
+  & .bread__crumb--holder {
+    position: relative;
+    bottom: -300px;
+    z-index: 2;
+    & a {
+      transition: all 0.3s ease;
+      font-size: 16px;
+      color: var(--white-color);
+      text-transform: capitalize;
+      font-weight: 500;
+      & i {
+        font-size: 14px;
+        margin-left: 1px;
+      }
+    }
+    & a:nth-of-type(1):hover {
+      color: var(--secondry-color);
+    }
+    & a:nth-of-type(2) {
+      color: var(--third-white);
+      margin-left: 5px;
+      pointer-events: none;
+      cursor: text;
+    }
+    & .crumb--title {
+      font-size: 50px;
+      color: var(--white-color);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+  }
+}
+/* START PAGINATION COMPONENT */
+& .pagination--compo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  gap: 0 4px;
+  & li {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+  }
+  & li.active {
+    color: var(--white-color);
+    background-color: var(--second--section-bg);
+  }
+  & li:hover {
+    color: var(--white-color);
+    background-color: var(--second--section-bg);
+  }
+}
+/* END PAGINATION COMPONENT */

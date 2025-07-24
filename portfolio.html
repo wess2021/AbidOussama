@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,8 +33,13 @@
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
+    <!-- Add Light/Dark Mode Toggle -->
+    <button id="theme-toggle" aria-label="Toggle light/dark mode" class="btn position-absolute top-0 end-0 m-3" style="z-index:9999;">
+      <i class="bi bi-moon"></i>
+    </button>
+
     <div class="profile-img">
-      <img src="assets/img/profile2.jpg" alt="" class="img-fluid rounded-circle">
+      <img src="assets/img/profile2.jpg" alt="Abid Oussama profile photo" class="img-fluid rounded-circle">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -87,8 +92,8 @@
       <img src="assets/img/code2.jpg" alt="" data-aos="fade-in" class="">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Abid Oussama</h2>
-        <p>I'm <span class="typed" data-typed-items="Freelancer,Developer,Designer, Developer, Freelancer">a web developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+        <h2 class="fw-bold">Abid Oussama</h2>
+        <p class="lead">I'm <span class="typed" data-typed-items="Freelancer,Developer,Designer, Developer, Freelancer">a web developer</span></p>
       </div>
 
     </section><!-- /Hero Section -->
@@ -104,8 +109,8 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/profile1.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 d-flex flex-column align-items-center">
+            <img src="assets/img/profile1.jpg" class="img-fluid rounded shadow mb-3" alt="Abid Oussama secondary profile photo">
           </div>
           <div class="col-lg-8 content">
             <h2>Software Engineer &amp; Web Developer.</h2>
@@ -205,35 +210,35 @@
             <div class="progress">
               <span class="skill"><span>HTML/CSS</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:90%"></div>
               </div>
             </div><!-- End Skills Item -->
     
             <div class="progress">
               <span class="skill"><span>JavaScript</span> <i class="val">75%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:75%"></div>
               </div>
             </div><!-- End Skills Item -->
     
             <div class="progress">
               <span class="skill"><span>PHP</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%"></div>
               </div>
             </div><!-- End Skills Item -->
     
             <div class="progress">
               <span class="skill"><span>Java</span> <i class="val">95%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%"></div>
               </div>
             </div><!-- End Skills Item -->
     
             <div class="progress">
               <span class="skill"><span>C#</span> <i class="val">70%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%"></div>
               </div>
             </div><!-- End Skills Item -->
     
@@ -246,28 +251,28 @@
             <div class="progress">
               <span class="skill"><span>Laravel</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%"></div>
               </div>
             </div><!-- End Skills Item -->
     
             <div class="progress">
               <span class="skill"><span>Symfony</span> <i class="val">85%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%"></div>
               </div>
             </div><!-- End Skills Item -->
     
             <div class="progress">
               <span class="skill"><span>Vue.js</span> <i class="val">75%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%"></div>
               </div>
             </div><!-- End Skills Item -->
     
             <div class="progress">
               <span class="skill"><span>.NET MVC</span> <i class="val">80%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%"></div>
               </div>
             </div><!-- End Skills Item -->
     
@@ -276,14 +281,14 @@
             <div class="progress">
               <span class="skill"><span>MySQL</span> <i class="val">90%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%"></div>
               </div>
             </div><!-- End Skills Item -->
     
             <div class="progress">
               <span class="skill"><span>MongoDB</span> <i class="val">70%</i></span>
               <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%"></div>
               </div>
             </div><!-- End Skills Item -->
     
@@ -415,7 +420,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/app1.jpg" class="img-fluid rounded" alt="App Général assistance project screenshot">
                 <div class="portfolio-info">
                   <h4>App Général assistance</h4>
                   <p>Lorem ipsum, dolor sit amet consectetur</p>
@@ -427,7 +432,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/netyweb10.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/netyweb10.png" class="img-fluid rounded" alt="Nety web project screenshot">
                 <div class="portfolio-info">
                   <h4>Nety web</h4>
                   <p>Internet provider service</p>
@@ -439,7 +444,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/app2.jpg" class="img-fluid rounded" alt="App Général assistance towing service screenshot">
                 <div class="portfolio-info">
                   <h4>App Général assistance</h4>
                   <p>Towing service</p>
@@ -450,7 +455,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app3.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/app3.jpg" class="img-fluid rounded" alt="App Général assistance towing service screenshot">
                 <div class="portfolio-info">
                   <h4>App Général assistance</h4>
                   <p>Towing service</p>
@@ -461,7 +466,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app8.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/app8.png" class="img-fluid rounded" alt="Nety App internet provider screenshot">
                 <div class="portfolio-info">
                   <h4>Nety App</h4>
                   <p>internet provider App</p>
@@ -472,7 +477,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/netyweb11.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/netyweb11.png" class="img-fluid rounded" alt="Nety web internet provider screenshot">
                 <div class="portfolio-info">
                   <h4>Nety web</h4>
                   <p>website internet provider</p>
@@ -483,7 +488,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/crm web1.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/crm web1.png" class="img-fluid rounded" alt="Nety web CRM screenshot">
                 <div class="portfolio-info">
                   <h4>Nety web</h4>
                   <p>website internet provider</p>
@@ -494,7 +499,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/reclamation list.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/reclamation list.png" class="img-fluid rounded" alt="Nety web reclamation list screenshot">
                 <div class="portfolio-info">
                   <h4>Nety web</h4>
                   <p>website internet provider</p>
@@ -505,7 +510,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app7.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/app7.png" class="img-fluid rounded" alt="Nety App internet provider screenshot">
                 <div class="portfolio-info">
                   <h4>Nety App</h4>
                   <p>internet provider App</p>
@@ -517,7 +522,7 @@
           
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/webjawhra.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/webjawhra.png" class="img-fluid rounded" alt="Portabilité SIM number change screenshot">
                 <div class="portfolio-info">
                   <h4>Portabilité</h4>
                   <p>Change your SIM number service</p>
@@ -528,7 +533,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/webjawhra2.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/webjawhra2.png" class="img-fluid rounded" alt="Portabilité SIM number change screenshot">
                 <div class="portfolio-info">
                   <h4>Portabilité</h4>
                   <p>Change your SIM number service</p>
@@ -539,7 +544,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app5.jpg" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/app5.jpg" class="img-fluid rounded" alt="App Général assistance towing service screenshot">
                 <div class="portfolio-info">
                   <h4>App Général assistance</h4>
                   <p>Towing service</p>
@@ -550,7 +555,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app5.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/app5.png" class="img-fluid rounded" alt="Monoprix general store screenshot">
                 <div class="portfolio-info">
                   <h4>Monoprix</h4>
                   <p>General store</p>
@@ -561,7 +566,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app6.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/app6.png" class="img-fluid rounded" alt="Nety App internet provider screenshot">
                 <div class="portfolio-info">
                   <h4>Nety App</h4>
                   <p>internet provider App</p>
@@ -572,7 +577,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/webcss1.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/webcss1.png" class="img-fluid rounded" alt="Portabilité SIM number change screenshot">
                 <div class="portfolio-info">
                   <h4>Portabilité</h4>
                   <p>Change your SIM number service</p>
@@ -583,7 +588,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/webcss2.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/webcss2.png" class="img-fluid rounded" alt="Portabilité SIM number change screenshot">
                 <div class="portfolio-info">
                   <h4>Portabilité</h4>
                   <p>Change your SIM number service</p>
@@ -594,7 +599,7 @@
             </div><!-- End Portfolio Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/ajout rec.png" class="img-fluid" alt="">
+                <img src="assets/img/portfolio/ajout rec.png" class="img-fluid rounded" alt="Nety web internet provider website screenshot">
                 <div class="portfolio-info">
                   <h4>Nety web</h4>
                   <p>Internet provider website</p>
